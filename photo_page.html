@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/png" href="favicon.png" />
+	<title></title>
+</head>
+<body>
+	
+	<div class="photo"></div>
+	<div class="stats">
+		<div class="likes">Likes:</div>
+		<div class="updated_by">Updated By:</div>
+		<div class="descr">Description:</div>
+	</div>
+	<script type="module" src="script.js"></script>
+	<script>
+		var photoId = window.location.search.substring(4)
+		var xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function (data) {
+			if (this.readyState === 4) {
+				if (this.status === 200) {
+					document.body.className = 'ok';
+					data = JSON.parse(this.responseText);
+					console.log(data)
+				}
+			}
+					var photo = document.getElementsByClassName('photo')[0];
+					var likes = document.getElementsByClassName('likes')[0];
+					var updated_by = document.getElementsByClassName('updated_by')[0];
+					var descr = document.getElementsByClassName('descr')[0];
+					var b = document.createElement("span");
+					var c = document.createElement("span");
+					var d = document.createElement("span");
+					var img = document.createElement("img");
+					var description = (data.description != null) ? data.description : "no description" ;
+					img.src = ""+data.urls.full+"";
+					b.innerHTML = data.likes;
+					c.innerHTML = data.user.username;
+					d.innerHTML = data.description;
+					photo.appendChild(img);
+					likes.appendChild(b);
+					updated_by.appendChild(c);
+					descr.appendChild(d);
+					console.log(data.username);
+		};
+		xhr.open("GET", "https://api.unsplash.com/photos/"+photoId+"" + '?client_id=539a243d3ccefd20c8def536a22699cc55608b6e0ce6db506b2be577682ed2ef', true);
+		xhr.send(null);
+	
+	</script>
+</body>
+</html>

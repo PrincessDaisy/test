@@ -1,0 +1,19 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "API Test",
+  "main": "api.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PrincessDaisy/test.git"
+  },
+  "author": "PrincessDaisy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PrincessDaisy/test/issues"
+  },
+  "homepage": "https://github.com/PrincessDaisy/test#readme"
+}
