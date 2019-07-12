@@ -1,1 +1,1 @@
-<?php include_once("api.html"); ?>
+<?php include_once("index.html"); ?>
