@@ -4,11 +4,15 @@
   "description": "API Test",
   "main": "api.html",
   "scripts": {
+    "start": "serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/PrincessDaisy/test.git"
+  },
+  "dependencies": {
+    "serve": "^10.0.1"
   },
   "author": "PrincessDaisy",
   "license": "ISC",
