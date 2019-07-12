@@ -2,7 +2,7 @@
 window.onload = function(){
 	document.getElementById('form_search').addEventListener("submit", function(e){
 		var searchVal = document.getElementById('search').value;
-		document.getElementById('more').style.display = "inline-block"
+		document.getElementById('more').style.display = "inline-block";
 		e.preventDefault();
 		document.getElementsByClassName('photo-list')[0].innerHTML = '';
 		let xhr = new XMLHttpRequest();
@@ -29,6 +29,7 @@ window.onload = function(){
 		};
 		xhr.open("GET", 'https://api.unsplash.com/search/photos/?client_id=539a243d3ccefd20c8def536a22699cc55608b6e0ce6db506b2be577682ed2ef&query='+searchVal+'', true);
 		xhr.send(null);
+		setTimeout(document.getElementById('more').style.display = "inline-block", 1000);
 	});
 
 	var page = 1;
