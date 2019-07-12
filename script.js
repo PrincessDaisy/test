@@ -20,7 +20,7 @@ window.onload = function(){
 					var img = document.createElement("img");
 					img.src = ""+data.results[i].urls.small+"";
 					b.className = 'link slide-in-elliptic-top-fwd';
-					b.href = "photo_page.html?id="+data.results[i].id+"";
+					b.href = "photo_page?id="+data.results[i].id+"";
 					document.getElementsByClassName('photo-list')[0].appendChild(b)[i];
 					document.getElementsByClassName('link')[i].appendChild(img)[i];
 				}
@@ -49,7 +49,7 @@ window.onload = function(){
 					var img = document.createElement("img");
 					img.src = ""+data.results[i].urls.small+"";
 					b.className = 'link slide-in-elliptic-top-fwd';
-					b.href = "photo_page.html?id="+data.results[i].id+"";
+					b.href = "photo_page?id="+data.results[i].id+"";
 					document.getElementsByClassName('photo-list')[0].appendChild(b)[i];
 					document.getElementsByClassName('link')[(page - 1) * responseLength - 1  + i].appendChild(img)[i];
 				}
