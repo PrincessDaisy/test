@@ -2,7 +2,7 @@
 window.onload = function(){
 	document.getElementById('form_search').addEventListener("submit", function(e){
 		var searchVal = document.getElementById('search').value;
-		document.getElementById('more').style.display = "block"
+		document.getElementById('more').style.display = "inline-block"
 		e.preventDefault();
 		document.getElementsByClassName('photo-list')[0].innerHTML = '';
 		let xhr = new XMLHttpRequest();
