@@ -2,6 +2,7 @@
 window.onload = function(){
 	document.getElementById('form_search').addEventListener("submit", function(e){
 		var searchVal = document.getElementById('search').value;
+		page = 1;
 		e.preventDefault();
 		document.getElementsByClassName('photo-list')[0].innerHTML = '';
 		let xhr = new XMLHttpRequest();
